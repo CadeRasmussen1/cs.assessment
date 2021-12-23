@@ -1,0 +1,14 @@
+| arr             | append   | insert    |
+| --------------- | -------- | --------- |
+| tiny arr        | 122.2 μs | 48.6 μs   |
+| small arr       | 135.6 μs | 62.5 μs   |
+| medium arr      | 194.4 μs | 240.7 μs  |
+| large arr       | 857.5 μs | 10.642 ms |
+| extra large arr | 3.8474ms | 1.0161s   |
+
+
+looking at the graph append is slowly going then jumps when it hits the large arr(10000).
+with insert its starts going up slow then jumps up in time when it hits the medium arr(1000).
+the functions scale based of of the lenght of the arr of numbers which means there is more data
+to go over. the append functions scales better because of it just adds one to the end of the arr.O(1)
+where the insert function has to put the number infront then increment all of the other indexs by one.O(n)
